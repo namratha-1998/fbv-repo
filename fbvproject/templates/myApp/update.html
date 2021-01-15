@@ -1,0 +1,16 @@
+<html>
+  {% extends 'myApp/parent.html' %}
+    <body>
+       {% block for_child %}
+         <h1>updation form</h1>
+          <form  method="post">
+            Eno:<input type="text" name="eno" value="{{emp.eno}}"><br><br>
+            Esal:<input type="text" name="ename" value="{{emp.esal}}"><br><br>
+            Eaddr:<input type="text" name="eaddr" value="{{emp.eaddr}}"><br><br>
+            {% csrf_token%}
+            <input type="submit" class="btn btn-lg btn-warning" value="submit">
+
+          </form>
+        {% endblock %}
+    </body>
+<html>  
